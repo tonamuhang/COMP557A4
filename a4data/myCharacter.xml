@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+	
+	<node type="free" name="root">
+		<geom type="sphere" name="body" scale="4 2 4" color="1 0 0" location="0 0 0"></geom>
+		<node name="head" type="spherical" translation="4 0 0" min="-30" max="30" axis="x" orientation="0 0 0">
+			<geom type="sphere" scale="1.5 1.5 1.5" name="head" color="0.5 0.5 0.5" location="0 0 0"></geom>
+			<geom name="leye" color="1 1 1" scale="0.5 0.5 0.5"
+				type="sphere" location="2 2 2">
+				<node type="spherical" name="lpupil" max="30" min="-30"
+					translation="1 0 0" orientation="0 0 0">
+					<geom type="sphere" scale="0.3 0.3 0.3" color="0 0 0" location="0 0 0"
+						name="lpup">
+					</geom>
+				</node>
+			</geom>
+			<geom color="1 1 1" location="2 2 -2" name="reye" scale="0.5 0.5 0.5" type="sphere">
+				<node name="rpupil" type="rotary" max="45" min="-45"
+					translation="1" axis="x" rotation="0">
+					<geom name="rpup" type="sphere" color="0 0 0" location="0 0 0"
+						scale="0.3 0.3 0.3">
+					</geom>
+				</node></geom></node>
+		
+		
+		<node type="spherical" orientation="10 0 0" translation="2 0 0.5" name="ljoint" max="15"
+			min="-15">
+		<node type="rotary" name="lelb" min="0" max="30" axis="y" translation="0" rotation="15">
+			<geom type="sphere" name="relbow" scale="0.3 0.3 1" color="0.5 0.5 0.5" location="0 0 3"></geom>
+			<node type="spherical" name="lelb" orientation="0 0 0" max="3" min="-3" translation="0 0 4">
+				<geom name="hand" color="1 1 1" location="0 0 0" scale="0.3 0.3 0.3" type="sphere"></geom>
+			</node>
+		</node></node>
+		<node type="spherical" name="rjoint" orientation="-10 0 0" translation="2 0 -0.5" max="15"
+			min="-15">
+		<node name="relb" type="rotary" axis="y" max="0" min="-30" translation="0" rotation="-15">
+			<geom name="relbow" scale="0.3 0.3 1" location="0 0 -3" color="0.5 0.5 0.5" type="sphere"></geom>
+			<node type="spherical" name="rjoint" orientation="0 0 0" max="3" min="-3" translation="0 0 -4">
+				<geom name="hand" color="1 1 1" location="0 0 0" scale="0.3 0.3 0.3" type="sphere"></geom>
+			</node>
+		</node></node></node></doc>
