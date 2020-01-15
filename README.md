@@ -11,6 +11,7 @@ Sphere
 Quadric
 
 ![alt text](https://github.com/tonamuhang/COMP557A4/blob/master/BoxRGBLights.png?raw=true)
+
 Box
 
 ![alt text](https://github.com/tonamuhang/COMP557A4/blob/master/TorusMesh.png?raw=true)
